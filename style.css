@@ -1,0 +1,700 @@
+/* ------------------------------
+   COLOR PALETTE
+-------------------------------- */
+
+:root {
+
+  --cream: #FFF9F7;
+
+  --soft-pink: #EBCFD2;
+
+  --dusty-rose: #C99DA3;
+
+  --deep-rose: #A8767D;
+
+  --light-blush: #F7EDEE;
+
+  --warm-white: #FFFDFC;
+
+  --brown: #594649;
+
+  --dark: #342B2D;
+
+  --taupe: #A3918E;
+
+}
+
+
+/* ------------------------------
+   GENERAL
+-------------------------------- */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--cream);
+
+  color: var(--brown);
+
+  font-family: "DM Sans", sans-serif;
+
+  line-height: 1.7;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+-------------------------------- */
+
+.navbar {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  padding: 22px 7%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: rgba(255, 249, 247, 0.96);
+
+  border-bottom: 1px solid #eadfe0;
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.logo {
+
+  color: var(--deep-rose);
+
+  text-decoration: none;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+}
+
+
+.nav-links {
+
+  display: flex;
+
+  gap: 32px;
+
+}
+
+
+.nav-links a {
+
+  position: relative;
+
+  color: var(--brown);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+}
+
+
+.nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -7px;
+
+  width: 0;
+
+  height: 1px;
+
+  background: var(--deep-rose);
+
+  transition: 0.3s;
+
+}
+
+
+.nav-links a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* ------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+
+  min-height: 84vh;
+
+  padding: 85px 10%;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+}
+
+
+.eyebrow {
+
+  color: var(--deep-rose);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+}
+
+
+.hero h1 {
+
+  margin: 10px 0 22px;
+
+  color: var(--dark);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  line-height: 1.05;
+
+}
+
+
+.hero h1 span {
+
+  color: var(--deep-rose);
+
+  font-style: italic;
+
+}
+
+
+.hero-description {
+
+  max-width: 600px;
+
+  margin-bottom: 35px;
+
+  font-size: 17px;
+
+  color: #6c595c;
+
+}
+
+
+.hero-image {
+
+  position: relative;
+
+}
+
+
+.hero-image::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 95%;
+
+  height: 95%;
+
+  top: 28px;
+
+  left: -28px;
+
+  background-color: var(--soft-pink);
+
+  border-radius: 180px 180px 12px 12px;
+
+  z-index: -1;
+
+}
+
+
+.hero-image img {
+
+  width: 100%;
+
+  max-height: 575px;
+
+  object-fit: cover;
+
+  border-radius: 180px 180px 12px 12px;
+
+}
+
+
+/* ------------------------------
+   BUTTON
+-------------------------------- */
+
+.button {
+
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background-color: var(--deep-rose);
+
+  color: white;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+
+}
+
+
+.button:hover {
+
+  background-color: var(--brown);
+
+  transform: translateY(-2px);
+
+}
+
+
+/* ------------------------------
+   SECTIONS
+-------------------------------- */
+
+.section {
+
+  padding: 100px 10%;
+
+  text-align: center;
+
+}
+
+
+.section-label {
+
+  margin-bottom: 5px;
+
+  color: var(--deep-rose);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+}
+
+
+.section h2,
+
+.contact-section h2 {
+
+  margin: 5px 0;
+
+  color: var(--dark);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 45px;
+
+}
+
+
+.pink-line {
+
+  width: 55px;
+
+  height: 2px;
+
+  margin: 20px auto 30px;
+
+  background-color: var(--dusty-rose);
+
+}
+
+
+.pink-line.left {
+
+  margin-left: 0;
+
+}
+
+
+.section-description {
+
+  max-width: 720px;
+
+  margin: auto;
+
+}
+
+
+/* ------------------------------
+   ABOUT CARDS
+-------------------------------- */
+
+.about-cards {
+
+  max-width: 1000px;
+
+  margin: 55px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+}
+
+
+.mini-card {
+
+  padding: 35px 28px;
+
+  background-color: var(--warm-white);
+
+  border: 1px solid #eddcde;
+
+  border-radius: 18px;
+
+}
+
+
+.mini-card span {
+
+  color: var(--dusty-rose);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 14px;
+
+}
+
+
+.mini-card h3 {
+
+  color: var(--dark);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+
+}
+
+
+/* ------------------------------
+   BLUSH SECTION
+-------------------------------- */
+
+.blush-section {
+
+  background-color: var(--light-blush);
+
+}
+
+
+.two-column {
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+  text-align: left;
+
+}
+
+
+.quote-card {
+
+  padding: 60px;
+
+  background-color: var(--warm-white);
+
+  border-radius: 100px 100px 16px 16px;
+
+}
+
+
+.quote-card h3 {
+
+  margin: 5px 0;
+
+  color: var(--deep-rose);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 31px;
+
+  line-height: 1.4;
+
+}
+
+
+.tiny-title {
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: var(--taupe);
+
+}
+
+
+/* ------------------------------
+   EXPERIENCE
+-------------------------------- */
+
+.experience-grid {
+
+  max-width: 1100px;
+
+  margin: 55px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+}
+
+
+.experience-card {
+
+  padding: 45px 32px;
+
+  text-align: left;
+
+  background-color: var(--warm-white);
+
+  border-radius: 15px;
+
+  border-top: 4px solid var(--soft-pink);
+
+  transition: 0.3s;
+
+}
+
+
+.experience-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 35px rgba(89, 70, 73, 0.10);
+
+}
+
+
+.card-number {
+
+  color: var(--dusty-rose);
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.experience-card h3 {
+
+  color: var(--dark);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+}
+
+
+/* ------------------------------
+   CONTACT
+-------------------------------- */
+
+.contact-section {
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  background-color: var(--deep-rose);
+
+  color: white;
+
+}
+
+
+.contact-section .section-label {
+
+  color: var(--soft-pink);
+
+}
+
+
+.contact-section h2 {
+
+  color: white;
+
+}
+
+
+.contact-section p {
+
+  margin-bottom: 30px;
+
+}
+
+
+.white-button {
+
+  background-color: white;
+
+  color: var(--deep-rose);
+
+}
+
+
+.white-button:hover {
+
+  background-color: var(--light-blush);
+
+  color: var(--dark);
+
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+
+  padding: 30px 8%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  background-color: var(--dark);
+
+  color: #d8c8ca;
+
+  font-size: 12px;
+
+}
+
+
+/* ------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 850px) {
+
+  .navbar {
+
+    flex-direction: column;
+
+    gap: 18px;
+
+  }
+
+
+  .nav-links {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+  }
+
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    padding-top: 60px;
+
+  }
+
+
+  .hero-image {
+
+    max-width: 450px;
+
+    margin: auto;
+
+  }
+
+
+  .about-cards,
+
+  .experience-grid,
+
+  .two-column {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  footer {
+
+    flex-direction: column;
+
+    text-align: center;
+
+  }
+
+}
