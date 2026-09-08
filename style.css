@@ -1,700 +1,358 @@
-/* ------------------------------
-   COLOR PALETTE
--------------------------------- */
+/* -------------------------
+   COLOR + BASIC SETUP
+-------------------------- */
 
 :root {
-
-  --cream: #FFF9F7;
-
-  --soft-pink: #EBCFD2;
-
-  --dusty-rose: #C99DA3;
-
-  --deep-rose: #A8767D;
-
-  --light-blush: #F7EDEE;
-
-  --warm-white: #FFFDFC;
-
-  --brown: #594649;
-
-  --dark: #342B2D;
-
-  --taupe: #A3918E;
-
+  --pink-background: #f4dfe3;
+  --main-white: #fffdfc;
+  --border-color: #3f3537;
+  --text-color: #3b3032;
+  --accent-pink: #b9828e;
+  --light-pink: #f8ecef;
 }
-
-
-/* ------------------------------
-   GENERAL
--------------------------------- */
 
 * {
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  background-color: var(--pink-background);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  background-color: var(--cream);
 
-  color: var(--brown);
+/* -------------------------
+   MAIN WEBSITE CONTAINER
+   10% background each side
+-------------------------- */
 
-  font-family: "DM Sans", sans-serif;
+.site-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--main-white);
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+}
 
+
+/* -------------------------
+   TOP HEADER
+-------------------------- */
+
+.top-header {
+  display: grid;
+  grid-template-columns: 24% 76%;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.logo-area {
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid var(--border-color);
+}
+
+.logo-area h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.header-info {
+  min-height: 65px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* -------------------------
+   NAVIGATION
+-------------------------- */
+
+#navigation {
+  width: 100%;
+}
+
+.primary-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  min-height: 42px;
+
+  padding: 8px 20px;
+
+  background-color: var(--light-pink);
+
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.primary-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.primary-nav a:hover {
+  color: var(--accent-pink);
+}
+
+.secondary-nav {
+  min-height: 28px;
+
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  padding: 5px 20px;
+
+  background-color: #fff8fa;
+
+  border-bottom: 2px solid var(--border-color);
+}
+
+.secondary-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+
+/* -------------------------
+   MAIN PAGE GRID
+-------------------------- */
+
+.page-grid {
+  display: grid;
+
+  grid-template-columns:
+    24%
+    54%
+    22%;
+
+  min-height: 650px;
+}
+
+
+/* -------------------------
+   LEFT SIDEBAR
+-------------------------- */
+
+.left-sidebar {
+  padding: 35px 25px;
+
+  border-right: 2px solid var(--border-color);
+
+  background-color: #fffafa;
+}
+
+.left-sidebar h3 {
+  margin-top: 0;
+
+  font-size: 20px;
+
+  color: var(--accent-pink);
+}
+
+.left-sidebar a {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--text-color);
+
+  text-decoration: none;
+}
+
+.left-sidebar a:hover {
+  color: var(--accent-pink);
+}
+
+
+/* -------------------------
+   MAIN CONTENT
+-------------------------- */
+
+.main-content {
+  padding: 30px;
+}
+
+.hero-image {
+  width: 100%;
+  min-height: 260px;
+
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background-color: var(--light-pink);
+
+  border: 2px solid var(--border-color);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.main-content h1 {
+  margin-bottom: 15px;
+
+  font-size: 38px;
+
+  color: var(--accent-pink);
+}
+
+.main-content h2 {
+  margin-top: 30px;
+
+  color: var(--accent-pink);
+}
+
+.main-content p {
+  font-size: 16px;
   line-height: 1.7;
 }
 
 
-/* ------------------------------
-   NAVIGATION
--------------------------------- */
+/* -------------------------
+   RIGHT SIDEBAR
+-------------------------- */
 
-.navbar {
+.right-sidebar {
+  padding: 35px 22px;
 
-  position: sticky;
+  border-left: 2px solid var(--border-color);
 
-  top: 0;
-
-  z-index: 1000;
-
-  width: 100%;
-
-  padding: 22px 7%;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  background: rgba(255, 249, 247, 0.96);
-
-  border-bottom: 1px solid #eadfe0;
-
-  backdrop-filter: blur(10px);
-
+  background-color: #fffafa;
 }
 
+.right-sidebar h3 {
+  margin-top: 0;
 
-.logo {
+  font-size: 20px;
 
-  color: var(--deep-rose);
-
-  text-decoration: none;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-  font-weight: 600;
-
+  color: var(--accent-pink);
 }
 
+.sidebar-box {
+  margin-bottom: 25px;
 
-.nav-links {
+  padding: 18px;
 
-  display: flex;
+  background-color: var(--light-pink);
 
-  gap: 32px;
-
+  border: 1px solid #d9bfc5;
 }
 
-
-.nav-links a {
-
-  position: relative;
-
-  color: var(--brown);
-
-  text-decoration: none;
-
-  font-size: 13px;
-
-  font-weight: 500;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-
-}
-
-
-.nav-links a::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: -7px;
-
-  width: 0;
-
-  height: 1px;
-
-  background: var(--deep-rose);
-
-  transition: 0.3s;
-
-}
-
-
-.nav-links a:hover::after {
-
-  width: 100%;
-
-}
-
-
-/* ------------------------------
-   HERO
--------------------------------- */
-
-.hero {
-
-  min-height: 84vh;
-
-  padding: 85px 10%;
-
-  display: grid;
-
-  grid-template-columns: 1.2fr 0.8fr;
-
-  align-items: center;
-
-  gap: 80px;
-
-}
-
-
-.eyebrow {
-
-  color: var(--deep-rose);
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-}
-
-
-.hero h1 {
-
-  margin: 10px 0 22px;
-
-  color: var(--dark);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(55px, 7vw, 90px);
-
-  line-height: 1.05;
-
-}
-
-
-.hero h1 span {
-
-  color: var(--deep-rose);
-
-  font-style: italic;
-
-}
-
-
-.hero-description {
-
-  max-width: 600px;
-
-  margin-bottom: 35px;
-
-  font-size: 17px;
-
-  color: #6c595c;
-
-}
-
-
-.hero-image {
-
-  position: relative;
-
-}
-
-
-.hero-image::before {
-
-  content: "";
-
-  position: absolute;
-
-  width: 95%;
-
-  height: 95%;
-
-  top: 28px;
-
-  left: -28px;
-
-  background-color: var(--soft-pink);
-
-  border-radius: 180px 180px 12px 12px;
-
-  z-index: -1;
-
-}
-
-
-.hero-image img {
-
-  width: 100%;
-
-  max-height: 575px;
-
-  object-fit: cover;
-
-  border-radius: 180px 180px 12px 12px;
-
-}
-
-
-/* ------------------------------
-   BUTTON
--------------------------------- */
-
-.button {
-
-  display: inline-block;
-
-  padding: 14px 28px;
-
-  background-color: var(--deep-rose);
-
-  color: white;
-
-  border-radius: 30px;
-
-  text-decoration: none;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  letter-spacing: 1px;
-
-  transition: 0.3s;
-
-}
-
-
-.button:hover {
-
-  background-color: var(--brown);
-
-  transform: translateY(-2px);
-
-}
-
-
-/* ------------------------------
-   SECTIONS
--------------------------------- */
-
-.section {
-
-  padding: 100px 10%;
-
-  text-align: center;
-
-}
-
-
-.section-label {
-
-  margin-bottom: 5px;
-
-  color: var(--deep-rose);
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-}
-
-
-.section h2,
-
-.contact-section h2 {
-
-  margin: 5px 0;
-
-  color: var(--dark);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 45px;
-
-}
-
-
-.pink-line {
-
-  width: 55px;
-
-  height: 2px;
-
-  margin: 20px auto 30px;
-
-  background-color: var(--dusty-rose);
-
-}
-
-
-.pink-line.left {
-
-  margin-left: 0;
-
-}
-
-
-.section-description {
-
-  max-width: 720px;
-
-  margin: auto;
-
-}
-
-
-/* ------------------------------
-   ABOUT CARDS
--------------------------------- */
-
-.about-cards {
-
-  max-width: 1000px;
-
-  margin: 55px auto 0;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 22px;
-
-}
-
-
-.mini-card {
-
-  padding: 35px 28px;
-
-  background-color: var(--warm-white);
-
-  border: 1px solid #eddcde;
-
-  border-radius: 18px;
-
-}
-
-
-.mini-card span {
-
-  color: var(--dusty-rose);
-
-  font-family: "Playfair Display", serif;
+.sidebar-box p {
+  margin: 0;
 
   font-size: 14px;
 
+  line-height: 1.5;
 }
 
 
-.mini-card h3 {
-
-  color: var(--dark);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 22px;
-
-}
-
-
-/* ------------------------------
-   BLUSH SECTION
--------------------------------- */
-
-.blush-section {
-
-  background-color: var(--light-blush);
-
-}
-
-
-.two-column {
-
-  display: grid;
-
-  grid-template-columns: 1fr 0.8fr;
-
-  gap: 80px;
-
-  align-items: center;
-
-  text-align: left;
-
-}
-
-
-.quote-card {
-
-  padding: 60px;
-
-  background-color: var(--warm-white);
-
-  border-radius: 100px 100px 16px 16px;
-
-}
-
-
-.quote-card h3 {
-
-  margin: 5px 0;
-
-  color: var(--deep-rose);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 31px;
-
-  line-height: 1.4;
-
-}
-
-
-.tiny-title {
-
-  font-size: 11px;
-
-  letter-spacing: 3px;
-
-  color: var(--taupe);
-
-}
-
-
-/* ------------------------------
-   EXPERIENCE
--------------------------------- */
-
-.experience-grid {
-
-  max-width: 1100px;
-
-  margin: 55px auto 0;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-
-}
-
-
-.experience-card {
-
-  padding: 45px 32px;
-
-  text-align: left;
-
-  background-color: var(--warm-white);
-
-  border-radius: 15px;
-
-  border-top: 4px solid var(--soft-pink);
-
-  transition: 0.3s;
-
-}
-
-
-.experience-card:hover {
-
-  transform: translateY(-6px);
-
-  box-shadow: 0 12px 35px rgba(89, 70, 73, 0.10);
-
-}
-
-
-.card-number {
-
-  color: var(--dusty-rose);
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
-
-}
-
-
-.experience-card h3 {
-
-  color: var(--dark);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-}
-
-
-/* ------------------------------
-   CONTACT
--------------------------------- */
-
-.contact-section {
-
-  padding: 100px 20px;
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+footer {
+  padding: 20px 30px;
 
   text-align: center;
 
-  background-color: var(--deep-rose);
+  background-color: var(--light-pink);
+
+  border-top: 2px solid var(--border-color);
+}
+
+footer p {
+  margin: 4px 0;
+
+  font-size: 13px;
+}
+
+
+/* -------------------------
+   BUTTONS
+-------------------------- */
+
+.button {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 12px 22px;
+
+  background-color: var(--accent-pink);
 
   color: white;
 
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  transition: 0.2s;
+}
+
+.button:hover {
+  opacity: 0.85;
 }
 
 
-.contact-section .section-label {
-
-  color: var(--soft-pink);
-
-}
-
-
-.contact-section h2 {
-
-  color: white;
-
-}
-
-
-.contact-section p {
-
-  margin-bottom: 30px;
-
-}
-
-
-.white-button {
-
-  background-color: white;
-
-  color: var(--deep-rose);
-
-}
-
-
-.white-button:hover {
-
-  background-color: var(--light-blush);
-
-  color: var(--dark);
-
-}
-
-
-/* ------------------------------
-   FOOTER
--------------------------------- */
-
-footer {
-
-  padding: 30px 8%;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  background-color: var(--dark);
-
-  color: #d8c8ca;
-
-  font-size: 12px;
-
-}
-
-
-/* ------------------------------
+/* -------------------------
    MOBILE
--------------------------------- */
+-------------------------- */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 
-  .navbar {
-
-    flex-direction: column;
-
-    gap: 18px;
-
+  .site-wrapper {
+    width: 94%;
   }
 
+  .top-header {
+    grid-template-columns: 1fr;
+  }
 
-  .nav-links {
+  .logo-area {
+    border-right: none;
+    border-bottom: 2px solid var(--border-color);
+  }
 
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .primary-nav {
     flex-wrap: wrap;
-
-    justify-content: center;
-
     gap: 15px;
-
   }
-
-
-  .hero {
-
-    grid-template-columns: 1fr;
-
-    padding-top: 60px;
-
-  }
-
-
-  .hero-image {
-
-    max-width: 450px;
-
-    margin: auto;
-
-  }
-
-
-  .about-cards,
-
-  .experience-grid,
-
-  .two-column {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  footer {
-
-    flex-direction: column;
-
-    text-align: center;
-
-  }
-
 }
