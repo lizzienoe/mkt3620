@@ -3,147 +3,302 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lizzie Noe | Portfolio</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
+  <title>Lizzie Noe | Event Management & Marketing</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="site-wrapper">
-
-    <!-- HEADER -->
-    <header class="top-header">
-
-      <div class="logo-area">
-        <h1>Lizzie Noe</h1>
-      </div>
-
-      <div class="header-right">
-
-        <div class="header-info">
-          Event Management • Marketing • Creative Experiences
-        </div>
-
-        <!-- Navigation loads here from nav.js -->
-        <div id="navigation"></div>
-
-      </div>
-
-    </header>
+  <!-- NAVIGATION -->
+  <div id="navigation"></div>
 
 
-    <!-- MAIN PAGE -->
-    <div class="page-grid">
+  <!-- HERO SECTION -->
+  <section class="hero">
 
-      <!-- LEFT COLUMN -->
-      <aside class="left-sidebar">
+    <div class="hero-text">
 
-        <h3>Explore</h3>
+      <p class="eyebrow">EVENT MANAGEMENT • MARKETING • CREATIVITY</p>
 
-        <a href="#about">About Me</a>
-        <a href="#school">School Life</a>
-        <a href="#experience">Work Experience</a>
+      <h1>
+        Hi, I'm <span>Lizzie.</span>
+      </h1>
 
-      </aside>
+      <p class="hero-description">
+        I’m a senior at Iowa State University studying Event Management
+        and Marketing with a minor in Entrepreneurship. I’m passionate
+        about creating meaningful experiences through thoughtful event
+        planning, creative design, and strategic marketing.
+      </p>
 
-
-      <!-- CENTER CONTENT -->
-      <main class="main-content">
-
-        <div class="hero-image">
-          <img src="your-photo.jpg" alt="Lizzie Noe">
-        </div>
-
-
-        <section id="about">
-
-          <h1>Hi, I'm Lizzie!</h1>
-
-          <p>
-            I’m a senior at Iowa State University studying Event Management
-            and Marketing with a minor in Entrepreneurship. I’m passionate
-            about creating meaningful experiences through thoughtful event
-            planning, creative design, and strategic marketing.
-          </p>
-
-        </section>
-
-
-        <section id="school">
-
-          <h2>Life at Iowa State</h2>
-
-          <p>
-            My time at Iowa State has allowed me to gain experience both
-            inside and outside of the classroom. Through coursework,
-            campus involvement, internships, and hands-on event experience,
-            I have developed skills in communication, organization,
-            leadership, marketing, and event operations.
-          </p>
-
-        </section>
-
-
-        <section id="experience">
-
-          <h2>Work Experience</h2>
-
-          <p>
-            My work experiences have allowed me to gain hands-on experience
-            in weddings, event planning, marketing, guest services, and
-            event operations. I especially enjoy seeing the details of an
-            event come together and helping create memorable experiences.
-          </p>
-
-        </section>
-
-      </main>
-
-
-      <!-- RIGHT COLUMN -->
-      <aside class="right-sidebar">
-
-        <h3>Quick Info</h3>
-
-        <div class="sidebar-box">
-          <strong>School</strong>
-          <p>Iowa State University</p>
-        </div>
-
-        <div class="sidebar-box">
-          <strong>Studies</strong>
-          <p>Event Management + Marketing</p>
-        </div>
-
-        <div class="sidebar-box">
-          <strong>Minor</strong>
-          <p>Entrepreneurship</p>
-        </div>
-
-        <div class="sidebar-box">
-          <strong>Interests</strong>
-          <p>Weddings, events, marketing and design</p>
-        </div>
-
-      </aside>
+      <a href="#about" class="button">
+        Get to Know Me
+      </a>
 
     </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <div class="hero-image">
 
-      <p>© 2026 Lizzie Noe</p>
+      <!-- Replace this image with your own -->
+      <img
+        src="your-photo.jpg"
+        alt="Portrait of Lizzie Noe"
+      >
 
-    </footer>
+    </div>
 
-  </div>
+  </section>
 
 
-  <!-- Loads reusable navigation -->
+  <!-- ABOUT ME -->
+  <section class="section about" id="about">
+
+    <p class="section-label">A LITTLE ABOUT ME</p>
+
+    <h2>About Me</h2>
+
+    <div class="pink-line"></div>
+
+    <p class="section-description">
+      I love combining creativity, organization, and meaningful details
+      to create experiences people remember. My interests center around
+      weddings, social events, marketing, branding, and bringing ideas
+      to life.
+    </p>
+
+
+    <div class="about-cards">
+
+      <div class="mini-card">
+        <span>01</span>
+
+        <h3>My School</h3>
+
+        <p>
+          Iowa State University
+        </p>
+      </div>
+
+
+      <div class="mini-card">
+        <span>02</span>
+
+        <h3>My Studies</h3>
+
+        <p>
+          Event Management + Marketing
+        </p>
+      </div>
+
+
+      <div class="mini-card">
+        <span>03</span>
+
+        <h3>My Passion</h3>
+
+        <p>
+          Weddings, events, marketing & creative experiences
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SCHOOL LIFE -->
+  <section class="section blush-section" id="school">
+
+    <div class="two-column">
+
+      <div>
+
+        <p class="section-label">
+          MY COLLEGE EXPERIENCE
+        </p>
+
+        <h2>Life at Iowa State</h2>
+
+        <div class="pink-line left"></div>
+
+        <p>
+          My time at Iowa State has allowed me to explore both the
+          creative and business sides of the event industry. Through
+          coursework, campus involvement, internships, and hands-on
+          event experience, I've developed skills that have prepared
+          me for a career in events and marketing.
+        </p>
+
+      </div>
+
+
+      <div class="quote-card">
+
+        <p class="tiny-title">MY FOCUS</p>
+
+        <h3>
+          Creating experiences that feel intentional,
+          personal, and memorable.
+        </h3>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- WORK EXPERIENCE -->
+  <section class="section" id="experience">
+
+    <p class="section-label">
+      WHERE I'VE GROWN
+    </p>
+
+    <h2>Work Experience</h2>
+
+    <div class="pink-line"></div>
+
+    <p class="section-description">
+      My professional experiences have helped me strengthen my skills
+      in event coordination, client communication, marketing,
+      organization, and event operations.
+    </p>
+
+
+    <div class="experience-grid">
+
+      <div class="experience-card">
+
+        <p class="card-number">01</p>
+
+        <h3>Wedding & Event Planning</h3>
+
+        <p>
+          Experience assisting with wedding preparation,
+          event setup, timelines, vendor communication,
+          coordination, and event-day operations.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <p class="card-number">02</p>
+
+        <h3>Marketing</h3>
+
+        <p>
+          Experience with social media strategy, branding,
+          content creation, promotions, and audience engagement.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <p class="card-number">03</p>
+
+        <h3>Event Operations</h3>
+
+        <p>
+          Hands-on experience supporting events from preparation
+          and setup through guest experience and event execution.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PORTFOLIO -->
+  <section class="section blush-section" id="portfolio">
+
+    <p class="section-label">
+      SELECTED WORK
+    </p>
+
+    <h2>My Portfolio</h2>
+
+    <div class="pink-line"></div>
+
+    <p class="section-description">
+      A collection of event planning, marketing, design,
+      and creative projects I've worked on.
+    </p>
+
+    <a href="#" class="button">
+      View My Work
+    </a>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+
+    <p class="section-label">
+      LET'S CONNECT
+    </p>
+
+    <h2>Let's Create Something Memorable.</h2>
+
+    <p>
+      I'd love to connect about events, marketing,
+      creative projects, or future opportunities.
+    </p>
+
+    <a
+      href="mailto:YOUR_EMAIL_HERE"
+      class="button white-button"
+    >
+      Contact Me
+    </a>
+
+  </section>
+
+
+
+  <footer>
+
+    <p>
+      Designed with ♡ by Lizzie Noe
+    </p>
+
+    <p>
+      © 2026 Lizzie Noe
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
   <script src="nav.js"></script>
 
 </body>
