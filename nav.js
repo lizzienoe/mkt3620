@@ -1,19 +1,17 @@
-const navigationHTML = `
+const navigation = `
   <nav class="primary-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="school.html">School Life</a>
-    <a href="experience.html">Work Experience</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <nav class="secondary-nav">
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html#events">Events</a>
-    <a href="portfolio.html#marketing">Marketing</a>
-    <a href="school.html#involvement">Involvement</a>
+    <a href="index.html">Home</a>
+
+    <a href="index.html#about">About Me</a>
+
+    <a href="index.html#school">School Life</a>
+
+    <a href="index.html#experience">Work Experience</a>
+
+    <a href="index.html#goals">My Goals</a>
+
   </nav>
 `;
 
-document.getElementById("navigation").innerHTML = navigationHTML;
+document.getElementById("navigation").innerHTML = navigation;
