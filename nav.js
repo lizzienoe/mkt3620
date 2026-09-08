@@ -1,15 +1,51 @@
-const navigation = `
-  <nav class="navbar">
-    <a href="index.html" class="logo">Lizzie Noe</a>
+const navHTML = `
+  <nav class="primary-nav">
 
-    <div class="nav-links">
-      <a href="#about">About Me</a>
-      <a href="#school">School Life</a>
-      <a href="#experience">Work Experience</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About Me
+    </a>
+
+    <a href="school.html">
+      School Life
+    </a>
+
+    <a href="experience.html">
+      Work Experience
+    </a>
+
+    <a href="portfolio.html">
+      Portfolio
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+  <nav class="secondary-nav">
+
+    <a href="about.html#education">
+      Education
+    </a>
+
+    <a href="school.html#involvement">
+      Involvement
+    </a>
+
+    <a href="experience.html#internships">
+      Internships
+    </a>
+
+    <a href="portfolio.html#events">
+      Event Work
+    </a>
+
   </nav>
 `;
 
-document.getElementById("navigation").innerHTML = navigation;
+document.getElementById("navigation").innerHTML = navHTML;
