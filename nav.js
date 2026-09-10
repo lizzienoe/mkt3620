@@ -1,18 +1,9 @@
 const navigation = `
   <nav class="primary-nav">
-
-    <a href="index.html#Products">
-      Products
-    </a>
-
-    <a href="index.html#school">
-      School Life
-    </a>
-
-    <a href="index.html#experience">
-      Work Experience
-    </a>
-
+    <a href="index.html#about">About Me</a>
+    <a href="index.html#school">School Life</a>
+    <a href="index.html#experience">Work Experience</a>
+    <a href="products.html">Products</a>
   </nav>
 `;
 
