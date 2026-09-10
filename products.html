@@ -1,15 +1,223 @@
-const navigation = `
-  <nav class="primary-nav">
+<!DOCTYPE html>
+<html lang="en">
 
-    <a href="index.html#about">About Me</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <a href="index.html#school">School Life</a>
+  <title>Products | Elizabeth Noe</title>
 
-    <a href="index.html#experience">Work Experience</a>
+  <link rel="stylesheet" href="style.css">
 
-    <a href="products.html">Products</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  </nav>
-`;
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
 
-document.getElementById("navigation").innerHTML = navigation;
+
+<body>
+
+  <div class="site-wrapper">
+
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+      <div class="logo-area">
+        <img src="logo.png" alt="Elizabeth Noe logo">
+      </div>
+
+      <div class="header-right">
+
+        <div class="tagline-area">
+          <p>
+            Creating meaningful experiences through event management,
+            marketing, and creative design.
+          </p>
+        </div>
+
+        <div id="navigation"></div>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- PRODUCTS PAGE -->
+
+    <main class="products-main">
+
+      <div class="products-intro">
+
+        <p class="section-label">
+          MY WORK
+        </p>
+
+        <div class="short-line"></div>
+
+        <h1>Products</h1>
+
+        <p>
+          A collection of my event management, marketing,
+          branding, and creative work.
+        </p>
+
+      </div>
+
+
+      <!-- PRODUCTS -->
+
+      <section class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="product1.jpg" alt="Wedding planning work">
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              EVENT MANAGEMENT
+            </p>
+
+            <h2>Wedding Planning</h2>
+
+            <p>
+              A look at my experience with wedding preparation,
+              coordination, design details, timelines, and
+              event-day execution.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="product2.jpg" alt="Marketing work">
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              MARKETING
+            </p>
+
+            <h2>Marketing</h2>
+
+            <p>
+              Examples of social media planning, branding,
+              promotional strategy, and content development.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="product3.jpg" alt="Creative design work">
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              CREATIVE DESIGN
+            </p>
+
+            <h2>Event Design</h2>
+
+            <p>
+              Creative work focused on visual details,
+              event concepts, guest experience, and design.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="product4.jpg" alt="Event operations work">
+          </div>
+
+          <div class="product-info">
+
+            <p class="product-category">
+              EVENT OPERATIONS
+            </p>
+
+            <h2>Event Experience</h2>
+
+            <p>
+              Experience with event logistics, setup,
+              promotion, guest services, and event execution.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <div>
+        © 2026 Elizabeth Noe
+      </div>
+
+      <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#about">About Me</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="mailto:enoe@iastate.edu">Contact</a>
+
+      </div>
+
+    </footer>
+
+
+  </div>
+
+
+  <script src="nav.js"></script>
+
+</body>
+
+</html>
