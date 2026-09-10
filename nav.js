@@ -1,10 +1,14 @@
 const navigation = `
   <nav class="primary-nav">
-    <a href="index.html#about">About Me</a>
-    <a href="index.html#school">School Life</a>
-    <a href="index.html#experience">Work Experience</a>
-    <a href="products.html">Products</a>
+    <a href="./index.html#about">About Me</a>
+    <a href="./index.html#school">School Life</a>
+    <a href="./index.html#experience">Work Experience</a>
+    <a href="./products.html">Products</a>
   </nav>
 `;
 
-document.getElementById("navigation").innerHTML = navigation;
+const navContainer = document.getElementById("navigation");
+
+if (navContainer) {
+  navContainer.innerHTML = navigation;
+}
