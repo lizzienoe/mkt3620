@@ -1,8 +1,8 @@
 const navigation = `
   <nav class="primary-nav">
 
-    <a href="index.html#about">
-      About Me
+    <a href="index.html#Product">
+      Product
     </a>
 
     <a href="index.html#school">
