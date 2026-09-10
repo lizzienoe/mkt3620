@@ -232,14 +232,14 @@ body {
 
 
 /* =====================================
-   THREE COLUMN LAYOUT
+   TWO COLUMN LAYOUT
 ===================================== */
 
 .content-grid {
 
   display: grid;
 
-  grid-template-columns: 21% 58% 21%;
+  grid-template-columns: 80% 20%;
 
   align-items: stretch;
 
@@ -375,7 +375,7 @@ body {
 
 .main-content {
 
-  padding: 25px;
+  padding: 40px;
 
   background-color: var(--cream);
 
@@ -388,9 +388,11 @@ body {
 
   width: 100%;
 
-  margin-bottom: 32px;
+  margin-bottom: 50px;
 
   overflow: hidden;
+
+  height: 400px;
 
 }
 
@@ -401,7 +403,9 @@ body {
 
   width: 100%;
 
-  height: auto;
+  height: 100%;
+
+  object-fit: cover;
 
 }
 
@@ -655,13 +659,11 @@ footer {
 
   .content-grid {
 
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 1fr;
 
   }
 
   .right-sidebar {
-
-    grid-column: 1 / -1;
 
     border-left: none;
 
@@ -763,6 +765,11 @@ footer {
 
     justify-content: center;
 
+  }
+
+  .cover-image {
+    height: 300px;
+    margin-bottom: 30px;
   }
 
 }
